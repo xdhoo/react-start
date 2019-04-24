@@ -1,0 +1,25 @@
+
+.content {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.content-l {
+  margin-right: 30px
+}
+
+.content-author {
+  display: flex;
+  align-items: center;
+}
+.content-author img, .content-author strong, .content-author span {
+  padding: 10px;
+}
+.content-tags span {
+  margin-right: 10px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background-color: #ece7e7d0;
+}
