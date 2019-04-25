@@ -14,8 +14,13 @@ const getPlayListDetail = (id) => {
   return axios.get(base_url + '/playList?id=' + id)
 }
 
+const getTopListDetail = (id) => {
+  return axios.get(base_url + '/topList?id=' + id)
+}
+
 export default {
   getPlayList,
   getTopList,
-  getPlayListDetail
+  getPlayListDetail,
+  getTopListDetail
 }
