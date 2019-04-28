@@ -1,0 +1,25 @@
+.artists {
+  display: flex;
+  &-nav {
+    min-width: 160px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #d1cece;
+    padding: 10px;
+    &-block {
+      border-bottom: 1px solid #d3d3d3;
+      li {
+        padding: 10px;
+      }
+    }
+  }
+  &-list {
+    padding: 40px;
+    &-card {
+      padding-left: 20px;
+      float: left;
+      img {
+        border: 1px solid #d1cece;
+      }
+    }
+  }
+}

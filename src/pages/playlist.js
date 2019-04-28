@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import api from '../api/api'
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 class Playlist extends Component {
 
   constructor() {
@@ -32,7 +32,7 @@ class Playlist extends Component {
           return (
             <div className="card" key={item.id}>
               <Link to={`/playlist/${item.id}`}>
-                <img src={item.img}></img>
+                <img alt={item.title} src={item.img}></img>
               </Link>
               <span className="card-title">{item.title}</span>
               <span className="card-author">by {item.author}</span>

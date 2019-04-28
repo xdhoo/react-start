@@ -38,11 +38,11 @@ class Home extends Component {
           <button onClick = {this.getPlayList}> GET PLAY LIST </button>
           <button onClick = {this.getTopList}> GET TOP LIST </button>
         </header>
-        {this.state.activeList == 1 ? (
+        {this.state.activeList === 1 ? (
           this.state.playList.map(item => {
             return (
               <div className="card">
-                <img src={item.img}></img>
+                <img src={item.img} alt={item.title}></img>
                 <span className="card-title">{item.title}</span>
                 <span className="card-author">by {item.author}</span>
               </div>
@@ -62,7 +62,7 @@ class Home extends Component {
                 {this.state.topList.map(item => {
                   return (
                     <tr>
-                      <td><img className="album-img" src={item.album.picUrl + '?param=50y50&quality=100'}></img></td>
+                      <td><img className="album-img" alt={item.title} src={item.album.picUrl + '?param=50y50&quality=100'}></img></td>
                       <td>{item.name}</td>
                       <td>{item.artists[0].name}</td>
                     </tr>

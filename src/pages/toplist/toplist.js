@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import api from '../../api/api'
-import './toplist.css'
+import './toplist.scss'
 
 class TopList extends Component {
   constructor() {
@@ -36,7 +36,7 @@ class TopList extends Component {
                   {item.list.map(_item => {
                     return(
                       <li key={_item.name} onClick={() => this.chooseTopList(_item.id)}>
-                        <img src={_item.image}></img>
+                        <img alt={_item.title} src={_item.image}></img>
                         <div>
                           <p>{_item.name}</p>
                           <p className="text-muted">{_item.update}</p>
@@ -51,7 +51,7 @@ class TopList extends Component {
         </div>
         <div className="top-list-content">
           <div className="top-list-content-desc">
-            <img src={this.state.activeList.image}></img>
+            <img alt={this.state.activeList.title} src={this.state.activeList.image}></img>
             <div>
               <h3>{this.state.activeList.name}</h3>
               <p>{this.state.activeList.update}</p>
@@ -69,7 +69,7 @@ class TopList extends Component {
                 {this.state.activeList.list && this.state.activeList.list.map(item => {
                   return (
                     <tr>
-                      <td><img src={item.album.picUrl + '?param=40y40'}></img></td>
+                      <td><img alt={item.album.title} src={item.album.picUrl + '?param=40y40'}></img></td>
                       <td>{item.name}</td>
                       <td>{item.artists[0].name}</td>
                     </tr>

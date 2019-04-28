@@ -28,12 +28,12 @@ class PlaylistDetail extends Component {
       <div className="playlist-detail">
         <div className="content">
           <div className="content-l">
-            <img src={this.state.data.image}></img>
+            <img alt={this.state.data.title} src={this.state.data.image}></img>
           </div>
           <div className="content-r">
             <h4>{this.state.data.title}</h4>
             <p className="content-author">
-              <img src={this.state.data.author && this.state.data.author.image}></img>
+              <img alt={this.state.data.title} src={this.state.data.author && this.state.data.author.image}></img>
               <strong>{this.state.data.author && this.state.data.author.name}</strong>
               <span>{this.state.data.author && this.state.data.author.createTime}</span>
             </p>
