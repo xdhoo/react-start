@@ -35,7 +35,7 @@ class TopList extends Component {
                 <ul>
                   {item.list.map(_item => {
                     return(
-                      <li key={_item.name}>
+                      <li key={_item.name} onClick={() => this.chooseTopList(_item.id)}>
                         <img src={_item.image}></img>
                         <div>
                           <p>{_item.name}</p>
@@ -81,6 +81,14 @@ class TopList extends Component {
         </div>
       </div>
     )
+  }
+
+  chooseTopList = (id) => {
+    api.getTopListDetail(id).then(res => {
+      this.setState({
+        activeList: res.data
+      })
+    })
   }
 }
 
