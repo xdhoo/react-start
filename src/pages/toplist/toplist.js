@@ -68,7 +68,7 @@ class TopList extends Component {
                 </tr>
                 {this.state.activeList.list && this.state.activeList.list.map(item => {
                   return (
-                    <tr>
+                    <tr onClick={() => {this.playIt(item.id)}}>
                       <td><img alt={item.album.title} src={item.album.picUrl + '?param=40y40'}></img></td>
                       <td>{item.name}</td>
                       <td>{item.artists[0].name}</td>
@@ -89,6 +89,10 @@ class TopList extends Component {
         activeList: res.data
       })
     })
+  }
+
+  playIt = (songId) => {
+    console.log(songId)
   }
 }
 

@@ -14,11 +14,16 @@
   }
   &-list {
     padding: 40px;
+    max-width: 650px;
     &-card {
       padding-left: 20px;
       float: left;
       img {
         border: 1px solid #d1cece;
+      }
+      p {
+        margin: 0;
+        padding: 5px 0 20px;
       }
     }
   }

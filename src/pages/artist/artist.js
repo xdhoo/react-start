@@ -44,8 +44,7 @@ class Artists extends Component {
               <div className="artists-list-card">
                 <img alt={item.title} src={item.img}></img>
                 <p>
-                  <span className="artists-list-card-title">{item.title}</span>
-                  <span className="artists-list-card-author">by {item.author}</span>
+                  <span className="artists-list-card-title">{item.artist}</span>
                 </p>
               </div>
             )
