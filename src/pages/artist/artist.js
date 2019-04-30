@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import api from '../../api/api'
+import { Link } from 'react-router-dom';
 import './artist.scss'
+
 class Artists extends Component {
   constructor () {
     super()
@@ -42,7 +44,9 @@ class Artists extends Component {
           {this.state.artists.map(item => {
             return (
               <div className="artists-list-card">
-                <img alt={item.title} src={item.img}></img>
+                <Link to={`/artists/${item.id}`}>
+                  <img alt={item.title} src={item.img}></img>
+                </Link>
                 <p>
                   <span className="artists-list-card-title">{item.artist}</span>
                 </p>

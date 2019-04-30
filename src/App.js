@@ -6,6 +6,7 @@ import Playlist from './pages/playlist'
 import TopList from './pages/toplist/toplist'
 import { Link, Route } from 'react-router-dom';
 import Artists from './pages/artist/artist';
+import ArtistDetail from './pages/artist-detail/artist-detail';
 class App extends Component {
 
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
         <Route exact={true} path="/playlist/:id" component={PlaylistDetail}/>
         <Route exact={true} path="/toplist" component={TopList}/>
         <Route exact={true} path="/artists" component={Artists}></Route>
+        <Route exact={true} path="/artists/:id" component={ArtistDetail}></Route>
       </div>
     );
   }
